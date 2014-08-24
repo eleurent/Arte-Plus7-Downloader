@@ -5,7 +5,9 @@ Installing
 -----------------
 Just drag this link to your bookmark table:
 
-*javascript:%20(function%20()%20{%20%20%20%20%20var%20jsCode%20=%20document.createElement('script');%20%20%20%20%20jsCode.setAttribute('src',%20'https://raw.githubusercontent.com/eleurent/Arte-Plus7-Downloader/master/arte.js');%20%20%20document.body.appendChild(jsCode);%20%20}());*
+`````````````````
+javascript:(function(){var%20jsCode=document.createElement('script');jsCode.setAttribute('src','https://raw.githubusercontent.com/eleurent/Arte-Plus7-Downloader/master/arte.js');document.body.appendChild(jsCode);}());
+`````````````````
 
 Usage
 -----------------
