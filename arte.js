@@ -1,13 +1,14 @@
-$("[arte_vp_url*=PLUS7]").each(function() {
+$("[arte_vp_url]:not([arte_vp_url*=EXTRAIT])").each(function() {
 	$.getJSON($(this).attr("arte_vp_url"), function(data) {
 		html = '<div class="container"><ul class="span12 functions unstyled">';
 		$.each(data.videoJsonPlayer.VSR, function(i, v) {
-	        if (v.mediaType == "video/mp4") {
+	        if (v.mediaType.indexOf("mp4") > -1) {
 	            html+='<li class="span2 module-grey"><a class="btn btn-block" href="'+v.url+'" target="_blank" download>'+v.versionLibelle + ': ' + v.quality + '</a></li>';
 	        }
 		});
 		html += '</ul></div>';
-		$("#details-focus").prepend(html);
+		buttons_tag = ($('#details-focus').length == 0) ? $('#section-player') : $('#details-focus');
+		buttons_tag.prepend(html);
 	});
 	return false;
 });
