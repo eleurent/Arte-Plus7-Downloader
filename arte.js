@@ -7,8 +7,7 @@ $("[arte_vp_url]:not([arte_vp_url*=EXTRAIT])").each(function() {
 	        }
 		});
 		html += '</ul></div>';
-		buttons_tag = ($('#details-focus').length == 0) ? $('#section-player') : $('#details-focus');
-		buttons_tag.prepend(html);
+		$('body').prepend(html);
 	});
 	return false;
 });
